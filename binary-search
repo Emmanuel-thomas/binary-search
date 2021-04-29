@@ -1,0 +1,22 @@
+l = [1, 5, 8, 12, 22, 31, 36, 43, 45, 49, 51, 56, 58, 66, 74, 79, 90]
+ele = int(input("enter the value"))
+low = 0
+f = 0
+upper = len(l) - 1
+while low<=upper:
+    mid = (low + upper) // 2
+    print(low,mid,upper)
+    print("hi")
+    if ele == l[mid]:
+        f = 1
+        break
+    elif ele < l[mid]:
+        upper = mid - 1
+        print(l[low:upper])
+    elif ele > l[mid]:
+        low = mid + 1
+        print(l[low:upper])
+if f == 1:
+    print("item found")
+else:
+    print("item not found")
